@@ -1,7 +1,7 @@
 import RunRouter from './router';
 
 export default function() {
-  var r = new RunRouter();
+  var route = new RunRouter();
 
   Backbone.history.start();
 }
