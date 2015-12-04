@@ -1,9 +1,10 @@
 export default Backbone.Model.extend({
-  urlRoot: 'http://tiny-lr.herokuapp.com/collections/runsdc',
+
+  urlRoot: 'http://tiny-lr.herokuapp.com/collections/runs-dc',
 
   defaults: {
-    time: '',
     date: '',
+    time: '',
     notes: '',
   },
 });

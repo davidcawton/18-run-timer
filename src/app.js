@@ -1,7 +1,7 @@
-import Router from './router';
+import RunRouter from './router';
 
 export default function() {
-  var router = new Router();
+  var r = new RunRouter();
 
   Backbone.history.start();
 }
