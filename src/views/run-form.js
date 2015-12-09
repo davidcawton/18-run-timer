@@ -5,13 +5,15 @@ export default Backbone.View.extend({
     submit(ev) {
       ev.preventDefault();
 
-      var time = this.$el.find('#time').val();
-      var date = this.$el.find('#date').val();
-      var notes = this.$el.find('#notes').val();
+      var time = this.$el.find('.run-time').val();
+      var date = this.$el.find('.run-date').val();
+      var notes = this.$el.find('.run-notes').val();
 
       this.model.save({time, date, notes})
       .then(() => {
         Backbone.history.navigate('', {trigger: true});
+
+        this.collection.add(this.model);
       });
     },
   },
@@ -22,13 +24,6 @@ export default Backbone.View.extend({
 
   render() {
     this.$el.html(this.template(this.model));
-
-    this.$el.append(`
-      <li>
-        <button class="btn btn-newrun">
-          <a href=''><i class="fa fa-plus"></i></a>
-        </button>
-      </li>`);
   },
 
   template(model) {
@@ -36,6 +31,8 @@ export default Backbone.View.extend({
     <input type="date" value="${model.get('date')}" class="run-date" placeholder="Date"></input>
     <input type="time" value="${model.get('time')}" class="run-time" placeholder="Run Time"></input>
     <input type="text" value="${model.get('notes')}" class="run-notes" placeholder="Run Notes"></input>
+
+    <button class="btn btn-newrun"><i class="fa fa-plus"></i></button>
     `;
   },
 });

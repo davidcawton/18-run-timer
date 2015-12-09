@@ -33,22 +33,17 @@ nav {
 .title {
   padding-left: 1em;
   font-size: 16px;
+  text-decoration: none;
 }
 
-.rundate {
+.new-run-list {
+  border-bottom: $regular_text 1px solid;
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  background-color: $button_text_grey;
-  padding: 0 1em;
-  list-style: none;
 }
 
-ul {
-  border-bottom: $regular_text 1px solid;
-}
+.run-date, .run-time, .run-notes {
 
-.run-date, .run-time {
   background-color: $button_text_grey;
   font-size: 16px;
   line-height: 24px;
@@ -57,31 +52,22 @@ ul {
 }
 
 .run-time {
-  text-align: right;
   color: $green_text;
 }
 
-.run-date {
+.run-date, .run-notes{
   color: $regular_text;
 }
 
-.btn {
+.fa {
   background-color: $button_grey;
   color: $button_green;
-}
-
-.btn-newrun {
-  float: right;
-  border-style: none;
-  margin-top: 100px;
-  background-color: $button_text_grey;
-}
-
-.fa-plus {
-  color: $button_grey;
-  background:$button_green;
   border-radius: 50%;
   border: solid 1px $button_green;
   padding: 15px;
-  // margin: 150px 5px 15px;
+}
+
+.btn {
+  border-style: none;
+  background-color: $button_text_grey;
 }

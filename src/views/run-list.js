@@ -11,7 +11,7 @@ export default Backbone.View.extend({
     this.$el.html(this.template(this.collection));
 
     this.$el.append(`
-      <li>
+      <li class ="btn-li">
         <button class="btn btn-newrun">
           <a href="#new"><i class="fa fa-plus"></i></a>
         </button>
@@ -19,9 +19,9 @@ export default Backbone.View.extend({
   },
 
   template(collection) {
-    return this.collection.map((run) => {
+    return collection.map((run) => {
       return `
-      <li>
+      <li class="new-run-list">
         <a href="#${run.id}">
           <span class="run-date">${run.get('date')}</span>
           <span class="run-time"> ${run.get('time')}</span>
