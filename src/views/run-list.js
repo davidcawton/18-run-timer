@@ -9,14 +9,24 @@ export default Backbone.View.extend({
 
   render() {
     this.$el.html(this.template(this.collection));
+
+    this.$el.append(`
+      <li>
+        <button class="btn btn-newrun">
+          <a href="#new"><i class="fa fa-plus"></i></a>
+        </button>
+      </li>`);
   },
 
   template(collection) {
     return this.collection.map((run) => {
       return `
-      <li>${run.get('date')}
-      ${run.get('time')}</li>
-      <a href="#${run.id}"><i class="fa fa-plus"></a></li>`;
+      <li>
+        <a href="#${run.id}">
+          <span class="run-date">${run.get('date')}</span>
+          <span class="run-time"> ${run.get('time')}</span>
+        </a>
+      </li>`;
     });
   },
 });

@@ -17,11 +17,11 @@ export default Backbone.View.extend({
 
   template(model) {
     return `
-    <p>${model.get(date)}</p>
-    <p>${model.get(time)}</p>
-    <p>${model.get(notes)}</p>
+    <p>${model.get('date')}</p>
+    <p>${model.get('time')}</p>
+    <p>${model.get('notes')}</p>
+
     <button><a href="#${model.id}/edit">Edit</a></button>
-    <button><a href="#${model.id}/edit" class="delete-btn"><Delete</a></button>
-    `
+    `;
   },
 });

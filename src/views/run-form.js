@@ -22,16 +22,20 @@ export default Backbone.View.extend({
 
   render() {
     this.$el.html(this.template(this.model));
+
+    this.$el.append(`
+      <li>
+        <button class="btn btn-newrun">
+          <a href=''><i class="fa fa-plus"></i></a>
+        </button>
+      </li>`);
   },
 
   template(model) {
     return `
-    <input type="date" value="${model.get('date')}" id="date" placeholder="Date"></input>
-    <input type="time" value="${model.get('time')}" id="time" placeholder="Run Time"></input>
-    <input type="text" value="${model.get('notes')}" id="notes" placeholder="Run Notes"></input>
-    <button class="btn btn-newrun">
-      <a href='#new'><i class="fa fa-plus"></i></a>
-    </button>
+    <input type="date" value="${model.get('date')}" class="run-date" placeholder="Date"></input>
+    <input type="time" value="${model.get('time')}" class="run-time" placeholder="Run Time"></input>
+    <input type="text" value="${model.get('notes')}" class="run-notes" placeholder="Run Notes"></input>
     `;
   },
 });

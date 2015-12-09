@@ -48,19 +48,20 @@ ul {
   border-bottom: $regular_text 1px solid;
 }
 
-#date, #time {
+.run-date, .run-time {
   background-color: $button_text_grey;
   font-size: 16px;
   line-height: 24px;
   border-style: none;
+  list-style: none;
 }
 
-#time {
+.run-time {
   text-align: right;
   color: $green_text;
 }
 
-#date {
+.run-date {
   color: $regular_text;
 }
 
