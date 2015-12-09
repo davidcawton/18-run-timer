@@ -48,19 +48,19 @@ ul {
   border-bottom: $regular_text 1px solid;
 }
 
-#rundate_list, #runtime_list {
+#date, #time {
   background-color: $button_text_grey;
   font-size: 16px;
   line-height: 24px;
   border-style: none;
 }
 
-#runtime_list {
+#time {
   text-align: right;
   color: $green_text;
 }
 
-#rundate_list {
+#date {
   color: $regular_text;
 }
 
