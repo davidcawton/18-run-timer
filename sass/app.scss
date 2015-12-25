@@ -24,31 +24,44 @@ html {
   background-color: $button_text_grey;
 }
 
+//NAVIGATION //
+
 nav {
   background: $header_bar_blue;
   display: flex;
-  color: #fff;
+  width: 100%;
 }
 
 .title {
   padding-left: 1em;
   font-size: 16px;
   text-decoration: none;
+  color: $title_white;
 }
 
-.new-run-list {
-  border-bottom: $regular_text 1px solid;
+
+//RUN LIST //
+
+ul {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  padding-left: 0;
+  list-style: none;
+}
+.new-run-list {
+  display: flex;
+  border-bottom: $regular_text 1px solid;
+  list-style: none;
 }
 
 .run-date, .run-time, .run-notes {
-
   background-color: $button_text_grey;
   font-size: 16px;
   line-height: 24px;
   border-style: none;
   list-style: none;
+  justify-content: space-between;
+  text-align: justify;
 }
 
 .run-time {
@@ -59,15 +72,46 @@ nav {
   color: $regular_text;
 }
 
+//BUTTONS //
+
 .fa {
   background-color: $button_grey;
   color: $button_green;
-  border-radius: 50%;
-  border: solid 1px $button_green;
-  padding: 15px;
+  border-style: none;
+  padding: 0;
+  text-decoration: none;
+  border-radius: 100%;
+  border: 1px solid $button_green;
+  font-size: 30px;
+
 }
 
 .btn {
-  border-style: none;
   background-color: $button_text_grey;
+  color: $button_green;
+  list-style: none;
+  border-radius: 50%;
+  border: 1px solid $button_green;
+}
+
+.btn-li, .btn-addrun {
+  float: right;
+  position: absolute;
+  bottom: 10%;
+  right: 20%;
+}
+
+.detail-btns {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  list-style: none;
+  padding-top: 50px;
+  justify-content: space-between;
+
+}
+
+.detail-btn {
+  display: flex;
+  border-style: none;
 }

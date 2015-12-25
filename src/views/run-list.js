@@ -13,7 +13,7 @@ export default Backbone.View.extend({
     this.$el.append(`
       <li class ="btn-li">
         <button class="btn btn-newrun">
-          <a href="#new"><i class="fa fa-plus"></i></a>
+          <a href="#new"><i class="fa fa-plus-circle"></i></a>
         </button>
       </li>`);
   },
@@ -21,10 +21,10 @@ export default Backbone.View.extend({
   template(collection) {
     return collection.map((run) => {
       return `
-      <li class="new-run-list">
+      <li  id="list-view" class="new-run-list">
         <a href="#${run.id}">
-          <span class="run-date">${run.get('date')}</span>
-          <span class="run-time"> ${run.get('time')}</span>
+          <span  id="list-date" class="run-date">${run.get('date')}</span>
+          <span id="list-time" class="run-time"> ${run.get('time')}</span>
         </a>
       </li>`;
     });

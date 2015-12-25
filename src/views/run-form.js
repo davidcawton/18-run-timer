@@ -30,9 +30,9 @@ export default Backbone.View.extend({
     return `
     <input type="date" value="${model.get('date')}" class="run-date" placeholder="Date"></input>
     <input type="time" value="${model.get('time')}" class="run-time" placeholder="Run Time"></input>
-    <input type="text" value="${model.get('notes')}" class="run-notes" placeholder="Run Notes"></input>
+    <input type="message" value="${model.get('notes')}" class="run-notes" placeholder="Run Notes"></input>
 
-    <button class="btn btn-newrun"><i class="fa fa-plus"></i></button>
+    <button class="btn btn-addrun"><i class="fa fa-plus-circle"></i></button>
     `;
   },
 });

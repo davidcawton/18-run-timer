@@ -1,4 +1,5 @@
 export default Backbone.View.extend({
+
   initialize() {
     this.render();
   },
@@ -15,16 +16,19 @@ export default Backbone.View.extend({
     this.$el.html(this.template(this.model));
 
     this.$el.append(`
-      <li>
-        <button class="btn btn-edit">
-          <a href="#${this.model.id}/edit"><i class="fa fa-pencil"></i></a>
-        </button>
-      </li>
-      <li>
-        <button class="btn btn-newrun">
-          <a href=''><i class="fa fa-chevron-circle-left"></i></a>
-        </button>
-      </li>`);
+      <ul class="detail-btns">
+        <li class="detail-btn">
+          <button class="btn btn-edit">
+            <a href="#${this.model.id}/edit"><i class="fa fa-pencil-square"></i></a>
+          </button>
+        </li>
+        <li class="detail-btn">
+          <button class="btn btn-newrun">
+            <a href=''><i class="fa fa-chevron-circle-left"></i></a>
+          </button>
+        </li>
+      </ul>
+      `);
   },
 
   template(model) {
