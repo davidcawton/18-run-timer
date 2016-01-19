@@ -25,6 +25,7 @@ export default Backbone.View.extend({
         <a href="#${run.id}">
           <span  id="list-date" class="run-date">${run.get('date')}</span>
           <span id="list-time" class="run-time"> ${run.get('time')}</span>
+          <span id="list-time" class="run-notes"> ${run.get('notes')}</span>
         </a>
       </li>`;
     });

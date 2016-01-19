@@ -32,11 +32,15 @@ nav {
   width: 100%;
 }
 
-.title {
+.title, .title a {
   padding-left: 1em;
   font-size: 16px;
   text-decoration: none;
   color: $title_white;
+}
+
+.title a:hover {
+  color: #1c1c1c;
 }
 
 
@@ -52,6 +56,8 @@ ul {
   display: flex;
   border-bottom: $regular_text 1px solid;
   list-style: none;
+  justify-content: space-between;
+  text-align: justify;
 }
 
 .run-date, .run-time, .run-notes {
@@ -60,38 +66,54 @@ ul {
   line-height: 24px;
   border-style: none;
   list-style: none;
-  justify-content: space-between;
-  text-align: justify;
+  padding-right: 25px;
+}
+
+
+a {
+  text-decoration: none;
 }
 
 .run-time {
   color: $green_text;
 }
 
-.run-date, .run-notes{
+.run-date{
   color: $regular_text;
+}
+
+.run-notes {
+  color: $regular_text;
+  padding-left: 20px;
 }
 
 //BUTTONS //
 
-.fa {
-  background-color: $button_grey;
+.fa, .fa a {
+  background-color: #1c1c1c;
   color: $button_green;
   border-style: none;
   padding: 0;
   text-decoration: none;
-  border-radius: 100%;
-  border: 1px solid $button_green;
+  border-style: none;
+  // border: 1px solid $button_green;
   font-size: 30px;
-
 }
 
-.btn {
-  background-color: $button_text_grey;
+.fa a:hover {
+  background-color: $title_white;
+}
+
+.btn a:hover {
+  background-color: $title_white;
+}
+
+.btn, .btn a {
+  background-color: #1c1c1c;
   color: $button_green;
   list-style: none;
-  border-radius: 50%;
-  border: 1px solid $button_green;
+  border-style: none;
+  // border: 1px solid $button_green;
 }
 
 .btn-li, .btn-addrun {
