@@ -28,9 +28,9 @@ export default Backbone.View.extend({
 
   template(model) {
     return `
-    <input type="date" value="${model.get('date')}" class="run-date" placeholder="Date"></input>
-    <input type="time" value="${model.get('time')}" class="run-time" placeholder="Run Time"></input>
-    <input type="message" value="${model.get('notes')}" class="run-notes" placeholder="Run Notes"></input>
+    <input type="date" value="${model.get('date')}" class="run-date form-inputs" placeholder="Date"></input>
+    <input type="time" value="${model.get('time')}" class="run-time form-inputs" placeholder="Run Time"></input>
+    <input type="message" value="${model.get('notes')}" class="run-notes form-inputs" placeholder="Run Notes"></input>
 
     <button class="btn btn-addrun"><i class="fa fa-plus-circle"></i></button>
     `;
